@@ -1,0 +1,25 @@
+{%  extends 'ProyectoWebApp/base.html' %}
+{% load static %}
+{% block content %}
+<div class="modal-dialog">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h2 class="modal-title" id="exampleModalLabel">Editar Usuarios</h2>
+          </div>
+          <form action="" method="POST">
+             <div class="modal-body">
+                {% csrf_token %}
+                
+                <table style = "margin: 20px auto;">{{ form.as_table }}</table>
+             </div>
+             <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <input type="submit" value="Guardar" class="btn btn-success">
+             </div>
+          </form>
+          <!-- Start Stepper HTML -->
+       </div>
+    </div>
+
+
+{% endblock %}

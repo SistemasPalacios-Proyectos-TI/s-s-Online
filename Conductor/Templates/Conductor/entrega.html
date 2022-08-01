@@ -1,0 +1,40 @@
+{%  extends 'ProyectoWebApp/base.html' %}
+{% load static %}
+{% block content %}
+<div class="modal-dialog">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h2 class="modal-title" id="exampleModalLabel">Observaciones de la entrega</h2>
+          </div>
+          <form method = "POST" action = "">
+             <div class="modal-body">
+                {% csrf_token %}
+                
+                <table> {{ form1.as_table }} </table>
+              
+             </div>
+            
+             <div class="modal-footer">
+                
+               
+                  {% comment %} <input type="submit" value="Entregado" name="entregado" class="btn btn-success"> {% endcomment %}
+                  <input type="submit" value="Guardar" class="btn btn-success">
+                  {% comment %} <button type="submit" class="btn btn-success" name="entregado" >Entregado</button> {% endcomment %}
+               
+               
+               <!-- boton no entregado -->
+
+               
+               {% comment %} <input type="submit" value="No Entregado" name="no_entregado" class="btn btn-danger">
+                   {% endcomment %}
+                  {% comment %} <button type="submit" class="btn btn-danger" name="no_entregado" >No Entregado</button> {% endcomment %}
+               
+                
+                
+             </div>
+          </form>
+       </div>
+    </div>
+
+
+{% endblock %}
